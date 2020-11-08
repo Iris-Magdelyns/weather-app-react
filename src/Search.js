@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './Search.css';
 
 export default function Search() {
   let [city, setCity] = useState("null");
   let [infoWeather, setInfoWeather] = useState(false);
   let [weather, setWeather] = useState({});
   let SearchEngine = (
-    <div>
+    <div className = "Search">
       <h1>Weather search engine</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -23,7 +24,7 @@ export default function Search() {
   );
 
   function showTemperature(response) {
-    console.log(response);
+      console.log(response);
     setInfoWeather(true);
     setWeather({
       temperature: response.data.main.temp,
@@ -46,8 +47,10 @@ export default function Search() {
   }
   if (infoWeather) {
     return (
-      <div>
+      <div className = "Search">
+        
         {SearchEngine}
+        <p>
         Temperature: {Math.round(weather.temperature)}°C
         <br />
         {weather.description}
@@ -57,9 +60,10 @@ export default function Search() {
         Humidity: {weather.humidity}
         <br />
         <img src={weather.icon} alt={weather.description} />
+        </p>
       </div>
     );
   } else {
-    return <div>{SearchEngine}</div>;
+    return <div className = "Search">{SearchEngine}</div>;
   }
 }

@@ -1,0 +1,24 @@
+img {
+  color: blue;
+}
+.Search h1 {
+  font-family: "Red Rose", cursive;
+  color: #0377c5;
+}
+.Search p {
+  background-image: linear-gradient(
+    -225deg,
+    #ffe29f 0%,
+    #ffa99f 48%,
+    #ff719a 100%
+  );
+  background-blend-mode: screen, overlay;
+  color: #212121;
+  border: solid 2px #f6f6f6;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px auto 50px auto;
+  display: block;
+  width: 550px;
+  text-align: left;
+}
