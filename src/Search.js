@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './Search.css';
+import Loader from 'react-loader-spinner';
 
 export default function Search() {
   let [city, setCity] = useState("null");
@@ -24,7 +25,7 @@ export default function Search() {
   );
 
   function showTemperature(response) {
-      console.log(response);
+     console.log(response);
     setInfoWeather(true);
     setWeather({
       temperature: response.data.main.temp,
@@ -64,6 +65,8 @@ export default function Search() {
       </div>
     );
   } else {
-    return <div className = "Search">{SearchEngine}</div>;
+    return <div className = "Search">{SearchEngine}
+    <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+    </div>;
   }
 }
