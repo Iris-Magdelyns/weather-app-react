@@ -3,15 +3,15 @@ import './Footer.css';
 
 export default function Footer() {
     return(
-        <div className="Footer">
+        <div className="Foot-note">
             <p>
-                Hosted on 
+                Hosted on
                 <a href="https://ecstatic-lalande-e73b1b.netlify.app/">
                     Netlify
                 </a>
                 <br />
                 <a href="https://github.com/Iris-Magdelyns/weather-app-react">
-                    Open source code
+                    Open source code 
                 </a> 
                 by Iris 
                     
