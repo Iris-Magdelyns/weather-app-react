@@ -66,7 +66,7 @@ export default function Search() {
     );
   } else {
     return <div className = "Search">{SearchEngine}
-    <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+    <Loader type="ThreeDots" color="#FFFF66" height={100} width={100} />
     </div>;
   }
 }
