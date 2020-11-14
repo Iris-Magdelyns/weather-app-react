@@ -11,7 +11,7 @@ export default function Footer() {
                 </a>
                 <br />
                 <a href="https://github.com/Iris-Magdelyns/weather-app-react">
-                    Open source code 
+                    Open source-code 
                 </a> 
                 by Iris 
                     
