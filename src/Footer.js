@@ -5,7 +5,7 @@ export default function Footer() {
     return(
         <div className="Foot-note">
             <p>
-                Hosted on
+                Hosted on 
                 <a href="https://ecstatic-lalande-e73b1b.netlify.app/">
                     Netlify
                 </a>
@@ -13,7 +13,7 @@ export default function Footer() {
                 <a href="https://github.com/Iris-Magdelyns/weather-app-react">
                     Open source-code 
                 </a> 
-                by Iris 
+                 by Iris 
                     
             </p>
         </div>
