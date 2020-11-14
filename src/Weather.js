@@ -1,16 +1,20 @@
 import React from "react";
+import "./Weather.css";
 
 export default function Weather(){
     return(
 
-    <div className ="Weater"> 
+    <div className ="Weather"> 
+    
     <form>
         <div className ="row">
             <div className="col-9">
                 <input
                 type ="search"
                 placeholder ="Search for city..."
-                className = "form-control" />
+                className = "form-control" 
+                autoFocus ="on"
+                />
             </div>
             <div className ="col-3">
                 <input 
@@ -28,7 +32,7 @@ export default function Weather(){
     </ul>
     
         <div className= "row">
-            <div className="col-6">
+            <div className="col-6 temperature">
                 <img src ="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt ="bewolkt" />
                 13 °C | °F
             </div>
