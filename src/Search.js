@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import axios from "axios";
 import './Search.css';
 import Loader from 'react-loader-spinner';
@@ -70,3 +70,4 @@ export default function Search() {
     </div>;
   }
 }
+*/
