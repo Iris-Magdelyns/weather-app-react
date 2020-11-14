@@ -96,7 +96,7 @@ export default function Weather(){
     return (
     <div className = "Weather">
         {SearchEngine}
-        <Loader type="ThreeDots" color="#FFFF66" height={100} width={100} />
+        <Loader type="ThreeDots" color="#FFFF66" height={100} width={100} className="Loader"/>
     </div>
     );    
     }
