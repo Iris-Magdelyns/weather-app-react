@@ -75,7 +75,7 @@ export default function Weather(){
     return (
     <div className = "Weather">
         {SearchEngine}
-        <FormatDate />
+       <h2> <FormatDate /> </h2>
         <Loader type="ThreeDots" color="#FFFF66" height={100} width={100} className="Loader"/>
     </div>
     );    
