@@ -64,7 +64,7 @@ export default function Weather(){
             <div className ="Weather"> 
                 {SearchEngine}
                <WeatherInfo data={weather} />
-               <WeatherForecast city ={weather.city} />
+               <WeatherForecast city={weather.city} />
             </div>
         )
 

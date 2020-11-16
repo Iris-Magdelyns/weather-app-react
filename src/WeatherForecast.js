@@ -13,18 +13,15 @@ export default function WeatherForecast(props){
         setLoaded(true);
     }
 
-    if (loaded && props.city === forecast.city.name) {
-        console.log(forecast);
+    if (loaded /*&& props.city === forecast.city.name*/) {
+        console.log(forecast.city.name);
         return (
             <div className="WeatherForecast row">
                 <WeatherForecastHours data={forecast.list[0]}/>
                 <WeatherForecastHours data={forecast.list[1]}/>
                 <WeatherForecastHours data={forecast.list[2]}/>
                 <WeatherForecastHours data={forecast.list[3]}/>
-                <WeatherForecastHours data={forecast.list[4]}/>
-               
-                
-               
+                <WeatherForecastHours data={forecast.list[4]}/>   
             </div>
         );
     } else{
