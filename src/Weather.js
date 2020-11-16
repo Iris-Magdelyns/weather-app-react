@@ -70,11 +70,11 @@ export default function Weather(){
 
     }else {
     return (
-    <div className = "Weather">
-        {SearchEngine}
-       <h2> <FormatDate /> </h2>
-        <Loader type="ThreeDots" color="#FFFF66" height={100} width={100} className="Loader"/>
-    </div>
-    );    
+        <div className = "Weather">
+            {SearchEngine}
+        <h2> <FormatDate /> </h2>
+            <Loader type="ThreeDots" color="#F6F2FE" height={100} width={500} className="Loader"/>
+        </div>
+        );    
     }
 }
