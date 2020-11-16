@@ -4,6 +4,7 @@
   padding: 5px;
   font-family: "Red Rose", cursive;
   width: 60%;
+  text-transform: capitalize;
 }
 .Weather h1 {
   color: #2c003e;
@@ -15,13 +16,17 @@
 .Weather ul {
   list-style-type: none;
 }
+
 .temperature {
   font-size: 20px;
   font-weight: bold;
   color: #2c003e;
 }
-.temperature img {
-  margin: auto 10px auto 20px;
+
+.temperature canvas {
+  padding: 0 5px;
+  margin: 0 5px;
+  display: inline-block;
 }
 .Loader {
   display: block;

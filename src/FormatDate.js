@@ -36,9 +36,9 @@ export default function FormatDate(){
     if (hours < 10 && minutes < 10 ){
       return(<div>{day} {date} {month}, 0{hours}:0{minutes}</div>);
     } else if (hours > 10 && minutes < 10 ){
-      return(<div>{day} {date} {month}, 0{hours}:0{minutes}</div>);
+      return(<div>{day} {date} {month}, {hours}:0{minutes}</div>);
     } else if (hours < 10 && minutes > 10 ){
-      return(<div>{day} {date} {month}, 0{hours}:0{minutes}</div>);
+      return(<div>{day} {date} {month}, 0{hours}:{minutes}</div>);
     } else{
       return(<div>{day} {date} {month}, {hours}:{minutes}</div>)
     }
