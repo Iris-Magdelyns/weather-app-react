@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./Weather.css";
 import Loader from 'react-loader-spinner';
 import axios from "axios";
+import FormatDate from "./FormatDate";
 
 export default function Weather(){
     let [city, setCity] = useState("null");
@@ -41,11 +42,12 @@ export default function Weather(){
         setInfoWeather(true);
         setWeather({
             city: response.data.name, 
-        temperature: response.data.main.temp,
-        wind: response.data.wind.speed,
-        humidity: response.data.main.humidity,
-        icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-        description: response.data.weather[0].description
+            temperature: response.data.main.temp,
+            wind: response.data.wind.speed,
+            humidity: response.data.main.humidity,
+            date: new Date (response.data.dt * 1000),
+            icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+            description: response.data.weather[0].description
         });
     }
     function changeCity(event) {
@@ -65,7 +67,7 @@ export default function Weather(){
                 {SearchEngine}
                 <h1>{weather.city}</h1>
                 <ul>
-                    <li>zaterdag 14.00</li>
+                    <li><FormatDate /></li>
                     <li>{weather.description}</li>
                 </ul>
             
