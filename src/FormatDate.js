@@ -29,11 +29,21 @@ export default function FormatDate(){
 
     let day = days[now.getDay()];
     let month = months[now.getMonth()];
-    let hour = now.getHours();
+    let hours = now.getHours();
     let minutes = now.getMinutes();
     let date = now.getDate();
+   
+    if (hours < 10 && minutes < 10 ){
+      return(<div>{day} {date} {month}, 0{hours}:0{minutes}</div>);
+    } else if (hours > 10 && minutes < 10 ){
+      return(<div>{day} {date} {month}, 0{hours}:0{minutes}</div>);
+    } else if (hours < 10 && minutes > 10 ){
+      return(<div>{day} {date} {month}, 0{hours}:0{minutes}</div>);
+    } else{
+      return(<div>{day} {date} {month}, {hours}:{minutes}</div>)
+    }
 
-    return(<div>{day} {date} {month}, {hour}:{minutes}</div>);
+    
 
 }
 

@@ -3,6 +3,7 @@ import "./Weather.css";
 import Loader from 'react-loader-spinner';
 import axios from "axios";
 import FormatDate from "./FormatDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(){
     let [city, setCity] = useState("null");
@@ -46,8 +47,9 @@ export default function Weather(){
             wind: response.data.wind.speed,
             humidity: response.data.main.humidity,
             date: new Date (response.data.dt * 1000),
-            icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-            description: response.data.weather[0].description
+            icon: response.data.weather[0].icon,
+            description: response.data.weather[0].description,
+            feelsLike:  response.data.main.feels_like
         });
     }
     function changeCity(event) {
@@ -65,32 +67,7 @@ export default function Weather(){
 
             <div className ="Weather"> 
                 {SearchEngine}
-                <h1>{weather.city}</h1>
-                <ul>
-                    <li><FormatDate /></li>
-                    <li>{weather.description}</li>
-                </ul>
-            
-                <div className= "row">
-                    <div className="col-6 temperature">
-
-                        <img src ="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt ="bewolkt" />
-                        {Math.round(weather.temperature)} °C | °F
-                    </div>
-                    <div className="col-6">
-                        <ul>
-                            <li>
-                                Neerslagkans: 24%
-                            </li>
-                            <li>
-                                Humidity: {weather.humidity}%
-                            </li>
-                            <li>
-                                Wind: {Math.round(weather.wind)} km/h
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+               <WeatherInfo data={weather} />
             </div>
         )
 
@@ -98,6 +75,7 @@ export default function Weather(){
     return (
     <div className = "Weather">
         {SearchEngine}
+        <FormatDate />
         <Loader type="ThreeDots" color="#FFFF66" height={100} width={100} className="Loader"/>
     </div>
     );    
