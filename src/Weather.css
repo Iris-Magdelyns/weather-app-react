@@ -3,7 +3,7 @@
   border: 2px solid #d9d9d9;
   background-color: #cddcdc;
   padding: 30px;
-  font-family: "Red Rose", cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: 550px;
   text-transform: capitalize;
   margin: 20px auto 50px auto;
@@ -25,7 +25,7 @@
 .Weather ul {
   list-style-type: none;
 }
-.temperature {
+.Weather .temperature {
   font-size: 22px;
   display: block;
   float: right;
@@ -36,10 +36,8 @@
   color: #2c003e;
 }
 
-.temperature canvas {
-  padding: 0 5px;
-  margin: 0 5px;
-  display: inline-block;
+.Weather canvas {
+  margin: 10px auto;
 }
 .Loader {
   display: block;

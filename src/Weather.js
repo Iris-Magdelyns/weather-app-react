@@ -4,13 +4,14 @@ import Loader from 'react-loader-spinner';
 import axios from "axios";
 import FormatDate from "./FormatDate";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(){
     let [city, setCity] = useState("null");
     let [infoWeather, setInfoWeather] = useState(false);
     let [weather, setWeather] = useState({});
     let SearchEngine = (
-        <div className="Search input-group">
+        <div className="Search input-group ">
             <form onSubmit ={handleSubmit}>
                 <input 
                 type="text" 
@@ -23,17 +24,12 @@ export default function Weather(){
                 />
                 
                 <input
-                className="btn btn-outline-secondary" 
+                className="btn btn-outline-secondary " 
                 type="submit"
                 id="search-city"
                 value="Search"
                 />
-                <input
-                className="btn btn-outline-secondary" 
-                type="submit"
-                id="current-city"
-                value="Current place"
-                />
+                
             </form>
         </div> 
     );
@@ -68,6 +64,7 @@ export default function Weather(){
             <div className ="Weather"> 
                 {SearchEngine}
                <WeatherInfo data={weather} />
+               <WeatherForecast city ={weather.city} />
             </div>
         )
 
